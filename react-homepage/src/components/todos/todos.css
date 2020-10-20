@@ -1,0 +1,110 @@
+.Todo{
+    position: relative;
+    flex: auto;
+    text-align: left;
+    margin: 1vh 1.2vw 1vh 1.2vw;
+    padding: 7px 10px;
+    /*min-width: 100px;*/
+    width: 20.3vw;
+    height: 30vh;
+    color: #555;
+    font-size: 16px;
+    background: #FFFFCC;
+    border: solid 3px #555;
+    border-radius: 10px;
+    box-sizing: border-box;
+
+}
+.FinishTodo{
+    position: relative;
+    flex: auto;
+    text-align: left;
+    margin: 1vh 1.2vw 1vh 1.2vw;
+    padding: 7px 10px;
+
+    width: 20.3vw;
+    height: 30vh;
+    color: #555;
+    font-size: 16px;
+    background: gray;
+    border: solid 3px #555;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+.Todo:before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: -24px;
+    margin-top: -12px;
+    border: 12px solid transparent;
+    border-left: 12px solid#FFFFCC;
+    z-index: 2;
+}
+.FinishTodo:before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: -24px;
+    margin-top: -12px;
+    border: 12px solid transparent;
+    border-left: 10px solid#555;
+    z-index: 2;
+}
+
+.Todo:after{
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: -30px;
+    margin-top: -14px;
+    border: 14px solid transparent;
+    border-left: 14px solid #555;
+    z-index: 1;
+}
+.FinishTodo:after{
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: -30px;
+    margin-top: -14px;
+    border: 14px solid transparent;
+    border-left: 14px solid #555;
+    z-index: 1;
+}
+
+.status{
+    display: flex;
+    position: relative;
+}
+.cancel{
+    position: absolute;
+    top:1px;
+    right: 1px;
+}
+.figure{
+    position: absolute;
+    bottom:  1px;
+    right: 1px;
+}
+.FinishTodo .figure{
+    position: absolute;
+}
+th{
+    font-size: 4vh;
+}
+td.normal{
+    word-break: break-all;
+    font-style: italic;
+    font-weight: bold;
+    white-space:pre;
+    font-size:3vh;
+}
+span{
+    font-size: 3.5vh;
+    
+}
+table{
+    font-weight: bold;
+    font-size:2.3vh
+}

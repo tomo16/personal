@@ -1,0 +1,19 @@
+/*TodoList全体のCSS*/
+.app-area{
+    height: 100vh;
+}
+.title{
+    height: auto;
+    font-size: 8vh;
+}
+h1.title{
+    color: black;
+    font-style: italic;
+}
+.comp{
+    display: flex;
+    height: 90vh;
+}
+.compRight{
+    height:90vh;
+}

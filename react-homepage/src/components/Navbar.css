@@ -1,0 +1,27 @@
+#wrapper{
+    display: flex;
+    flex-direction: column;
+    min-height:110vh;
+    position: relative;
+}
+header {
+    height: auto;
+    width: 99vw;
+    background-color:red;
+    
+}
+
+main{
+    height: 100vh;
+    width: 99vw;
+    
+}
+
+footer{
+    height: 10vh;
+    width: 99vw;
+    background-color: gray;
+    position: absolute;
+    bottom: 0;
+    
+}

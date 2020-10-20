@@ -1,0 +1,71 @@
+.list-area {
+    font-size: 30px;
+    
+    font-style: italic;
+    position: relative;
+    text-align: center;
+    margin: 2vh 0;
+    
+    padding: 5px;
+    width: 70vw;
+    height: auto;
+    background-color: #fff;
+    color: #000;
+    border: 5px solid #999;
+    border-radius: 3px;
+    box-shadow: 0 0 8px #333, 0 0 2px #555 inset;
+}
+    
+.list-area::before,
+.list-area::after {
+    position: absolute;
+    content: '';
+    bottom: 2px;
+    width: 25px; 
+    border-radius: 2px;
+    box-shadow: 1px 1px 3px #666;
+} 
+    
+.list-area::before {
+    right: 55px;
+    border: solid 3px #ff0000;
+}
+    
+.list-area::after {
+    right: 20px;
+    border: solid 3px #333;
+    transform: rotate(8deg);
+}
+.board{
+    height: 63vh;
+    display: flex;
+    flex-wrap: wrap;
+    overflow:hidden;
+    overflow-y:scroll;
+    margin-top: 2vh;
+}
+.subBar {
+    height: 6vh;
+    font-weight: bold;
+    font-size: 6vh;
+}
+#container {
+    display: grid; /* グリッドレイアウト */
+    grid-template-rows: 10vh 30vh 30vh;
+    grid-template-columns: 17.5vw 17.5vw 17.5vw;
+}
+#TasksBoard{
+    grid-row: 1/2;
+    grid-column: 1/2;
+    background-color: chartreuse;
+    font-weight: bold;
+}
+#itemB{
+    grid-row:2/3;
+    grid-column: 4/5;
+    background-color: chocolate;
+}
+#itemC{
+    grid-row:3/4;
+    grid-column: 1/2;
+}
