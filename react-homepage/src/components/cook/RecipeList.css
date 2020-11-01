@@ -1,0 +1,8 @@
+.board{
+    height: 63vh;
+    display: flex;
+    flex-wrap: wrap;
+    overflow:hidden;
+    overflow-y:scroll;
+    margin-top: 2vh;
+}

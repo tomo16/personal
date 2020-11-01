@@ -1,0 +1,60 @@
+.AppHome{
+    height: 100vh;
+    width: 99vw;
+    margin     : auto;
+    overflow   : hidden;
+}
+
+/* --- 背景の指定 ------------------------------------------- */
+.AppHome .bgImg {
+    position   : absolute;
+    top        : 60px;
+    left       : 0;
+    bottom     : 0;
+    right      : 0;
+    opacity    : 0;
+    animation  : bgAnime 16s infinite;   /* 4画像 × 各4s = 16s */
+}
+  /* --- 段差で背景画像のアニメーションを実行 ----------------- */
+.AppHome .src1 {
+    background-image : url(../../pictures/Old_Trafford_inside_20060726_1.jpg);   /* 背景の画像を指定 */
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 99vw;
+    background-size:cover;
+}
+.AppHome .src2 {
+    background-image : url(../../pictures/El_Camp_Nou_en_un_partido_de_la_Uefa_Champions_League.jpg);   /* 背景の画像を指定 */
+    background-position: center;
+    background-repeat: no-repeat;
+    animation-delay  : 4s;
+    height: 100vh;
+    width: 99vw;
+    background-size:cover;
+}
+.AppHome .src3 {
+    background-image : url(../../pictures/Anfield_stadium.jpg);   /* 背景の画像を指定 */
+    background-position: center;
+    background-repeat: no-repeat;
+    animation-delay  : 8s;
+    height: 100vh;
+    width: 99vw;
+    background-size:cover;
+}
+.AppHome .src4 {
+    background-image : url(../../pictures/34699883590_484ffa3ef4_b.jpg);   /* 背景の画像を指定 */
+    background-position: center;
+    background-repeat: no-repeat;
+    animation-delay  : 12s;
+    height: 100vh;
+    width: 99vw;
+    background-size:cover;
+}
+@keyframes bgAnime {
+    0% { opacity: 0; }
+    5% { opacity: 1; }
+    25% { opacity: 1; }
+    30% { opacity: 0; }
+    100% { opacity: 0; }
+}

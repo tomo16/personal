@@ -36,20 +36,22 @@ export default function Calender(props) {
     //propsが変わるたびに、selectedDateにセットしなおす(Todosを追加していくとき)
     useEffect(() => {
         handleDateChange(props.day);
-        console.log("first");
     }, [props.day]);
+     //deadlineでソート
+    todoList1.sort(function (a, b) {
+        return (a.deadline >= b.deadline ? 1 : -1);
+    });
+    useEffect(() => {
+        handleDateChange(props.day);
+    }, [todoList1]);
     console.log(todoList1);
-
+    //deadlineを変更したとき
     const handleChange = (data) => {
         let dataDay = String(data.getFullYear() + "/" + (data.getMonth() + 1) + "/" + ("0" + data.getDate()).slice(-2) + "(" + weeks[data.getDay()] + ")");
         console.log(todoList1);
-        handleDateChange(data);//表示変更
+        //handleDateChange(data);//表示変更
 
-        //deadlineでソート
-        todoList1.sort(function (a, b) {
-            return (a.deadline >= b.deadline ? 1 : -1);
-        });
-
+    
         //選択されたデータを日付だけ変更して新しく追加
         todoList1.push({
             deadline: dataDay,
@@ -57,8 +59,9 @@ export default function Calender(props) {
             content: todoList1[props.index].content,
             done: todoList1[props.index].done,
         });
+        
 
-        console.log(todoList1, selectedDate, props.index);//うまく値が入っていない！
+        console.log(todoList1, selectedDate, props.index);//変更したやつが、最後尾にはいっている
 
         todoList1.splice(props.index, 1);//index番目を削除
 
@@ -66,8 +69,8 @@ export default function Calender(props) {
         let local = JSON.stringify(todoList1);
         localStorage.setItem('saveTodoList', local);//変更後のやつをストレージへ保存
 
-
         props.changeStorage();//storage変更されたらboardの再レンダリングする
+        handleDateChange(data);//表示変更
 
     }
 
